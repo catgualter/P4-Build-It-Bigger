@@ -1,15 +1,15 @@
 package com.udacity.gradle.builditbigger;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.anagualter.jokepreview.JokePreviewActivity;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -96,7 +96,7 @@ public class MainActivityFragment extends Fragment {
                     @Override
                     public void onAsyncJokeDownloadCompleted(String joke) {
                         if(!TextUtils.isEmpty(joke)) {
-                            startActivity(JokesActivity.createIntent(getActivity(), joke));
+                            startActivity(JokePreviewActivity.createIntent(getActivity(), joke));
                         }else {
 
                             Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT)

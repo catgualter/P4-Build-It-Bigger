@@ -22,7 +22,7 @@ apply plugin: 'appengine'
 //targetCompatibility = JavaVersion.VERSION_1_7
 
 dependencies {
-    compile project(':lib')
+    compile project(':jokelibrary')
     appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.18'
     compile 'com.google.appengine:appengine-endpoints:1.9.18'
     compile 'com.google.appengine:appengine-endpoints-deps:1.9.18'

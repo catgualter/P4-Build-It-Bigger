@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import com.anagualter.jokepreview.JokePreviewActivity;
 import com.udacity.gradle.builditbigger.tasks.AsyncJokeLibraryTask;
 
 
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements AsyncJokeLibraryT
 
     private void displayJoke(String joke) {
         if(!TextUtils.isEmpty(joke)) {
-            startActivity(JokesActivity.createIntent(getApplicationContext(),
+            startActivity(JokePreviewActivity.createIntent(getApplicationContext(),
                     joke));
         }else {
 
