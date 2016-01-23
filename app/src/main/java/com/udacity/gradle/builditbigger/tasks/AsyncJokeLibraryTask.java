@@ -85,9 +85,10 @@ public class AsyncJokeLibraryTask {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
+
+            mAsyncJokeDownloadListener.onAsyncJokeDownloadCompleted(s);
             if(isProgressDialogActivated)
                 progressDialog.dismiss();
-            mAsyncJokeDownloadListener.onAsyncJokeDownloadCompleted(s);
         }
     }
 
